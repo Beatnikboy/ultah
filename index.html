@@ -1,24 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Selamat Ulang Tahun!</title>
-  <style>
-    body {
-      text-align: center;
-      font-family: Arial, sans-serif;
-      background-color: #ffe6e6;
-      margin-top: 100px;
-    }
-    h1 {
-      color: #ff3399;
-    }
-    p {
-      font-size: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Selamat Ulang Tahun!</h1>
-  <p>Semoga harimu menyenangkan dan penuh berkah 🎉🎂</p>
+  <div class="container">
+    <h1>🎉 Selamat Ulang Tahun! 🎉</h1>
+    <img src="https://cdn.pixabay.com/photo/2017/08/30/07/52/birthday-2690231_960_720.png" alt="Kue Ulang Tahun" class="cake" />
+    <p>Semoga harimu menyenangkan dan penuh kebahagiaan 🥳</p>
+    <button onclick="showSecret()">Klik untuk pesan rahasia 🎁</button>
+    <div id="secret" class="hidden">💖 Kamu orang yang sangat spesial! 💖</div>
+  </div>
+  
+  <canvas id="confetti"></canvas>
+  <script src="script.js"></script>
 </body>
 </html>
