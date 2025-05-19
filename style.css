@@ -1,0 +1,69 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(to bottom right, #ffe6f0, #ffeaa7);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    padding: 50px;
+  }
+  
+  h1 {
+    color: #ff4081;
+    animation: pop 1s ease-in-out infinite alternate;
+  }
+  
+  .cake {
+    width: 200px;
+    margin: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .cake:hover {
+    transform: scale(1.1) rotate(-3deg);
+  }
+  
+  p {
+    font-size: 20px;
+    color: #555;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ff6f91;
+    border: none;
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #ff3d7f;
+  }
+  
+  #secret {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #c2185b;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  @keyframes pop {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
