@@ -2,20 +2,32 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Selamat Ulang Tahun!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎂 Selamat Ulang Tahun!</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
     <h1>🎉 Selamat Ulang Tahun! 🎉</h1>
-    <img src="https://cdn.pixabay.com/photo/2017/08/30/07/52/birthday-2690231_960_720.png" alt="Kue Ulang Tahun" class="cake" />
-    <p>Semoga harimu menyenangkan dan penuh kebahagiaan 🥳</p>
-    <button onclick="showSecret()">Klik untuk pesan rahasia 🎁</button>
-    <div id="secret" class="hidden">💖 Kamu orang yang sangat spesial! 💖</div>
+    <div class="cake-container">
+      <img src="https://cdn.pixabay.com/photo/2017/08/30/07/52/birthday-2690231_960_720.png" alt="Kue Ulang Tahun" class="cake" />
+      <div class="candle-flame" id="flame"></div>
+    </div>
+    <p>Semoga harimu penuh kebahagiaan dan kejutan manis 🎁</p>
+    <button onclick="playMusic()">Putar Musik 🎵</button>
+    <button onclick="showSecret()">Klik untuk pesan rahasia 💌</button>
+    <div id="secret" class="hidden">💖 Kamu orang yang sangat spesial, semoga bahagia selalu! 💖</div>
   </div>
-  
+
   <canvas id="confetti"></canvas>
+  <audio id="music" src="https://www.fesliyanstudios.com/play-mp3/387">Your browser does not support audio.</audio>
+
+  <!-- Balon -->
+  <div class="balloon red"></div>
+  <div class="balloon blue"></div>
+  <div class="balloon green"></div>
+  <div class="balloon yellow"></div>
+
   <script src="script.js"></script>
 </body>
 </html>

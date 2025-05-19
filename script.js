@@ -1,9 +1,21 @@
 function showSecret() {
     const secret = document.getElementById('secret');
     secret.classList.remove('hidden');
+    blowCandle();
   }
   
-  // Confetti simple using canvas
+  function playMusic() {
+    const music = document.getElementById('music');
+    music.play();
+  }
+  
+  function blowCandle() {
+    const flame = document.getElementById('flame');
+    flame.style.animation = 'none';
+    flame.style.opacity = 0;
+  }
+  
+  // Confetti animasi
   const canvas = document.getElementById('confetti');
   const ctx = canvas.getContext('2d');
   canvas.width = window.innerWidth;
@@ -17,7 +29,6 @@ function showSecret() {
       r: Math.random() * 6 + 4,
       d: Math.random() * 10 + 5,
       color: `hsl(${Math.random() * 360}, 100%, 70%)`,
-      tilt: Math.random() * 10 - 10
     });
   }
   
