@@ -1,120 +1,125 @@
 body {
-    margin: 0;
-    font-family: 'Comic Sans MS', cursive;
-    background: linear-gradient(to right, #ffd6e0, #fceabb);
-    overflow-x: hidden;
-  }
-  
-  .container {
-    padding: 30px;
-    text-align: center;
-  }
-  
-  h1 {
-    color: #ff4081;
-    font-size: 2.5rem;
-  }
-  
-  .cake-container {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .cake {
-    width: 200px;
-    margin: 10px;
-  }
-  
-  .candle-flame {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 10px;
-    height: 20px;
-    background: orange;
-    border-radius: 50% 50% 50% 50%;
-    animation: flicker 0.2s infinite alternate;
-  }
-  
-  @keyframes flicker {
-    from { opacity: 1; transform: translateX(-50%) scaleY(1); }
-    to { opacity: 0.5; transform: translateX(-50%) scaleY(0.8); }
-  }
-  
-  p {
-    font-size: 1.2rem;
-    color: #333;
-  }
-  
-  button {
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #ff6f91;
-    color: white;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #ff3d7f;
-  }
-  
-  #secret {
-    margin-top: 20px;
-    font-size: 1.3rem;
-    color: #c2185b;
-    animation: fadeIn 1s ease forwards;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  /* Balon animasi */
-  .balloon {
-    width: 30px;
-    height: 40px;
-    border-radius: 50%;
-    position: absolute;
-    bottom: -50px;
-    animation: floatUp 6s infinite ease-in;
-    opacity: 0.7;
-  }
-  
-  .red { background: red; left: 10%; animation-delay: 0s; }
-  .blue { background: blue; left: 30%; animation-delay: 2s; }
-  .green { background: green; left: 50%; animation-delay: 4s; }
-  .yellow { background: yellow; left: 70%; animation-delay: 1s; }
-  
-  @keyframes floatUp {
-    0% { bottom: -50px; }
-    100% { bottom: 100%; }
-  }
-  
-  /* Responsif untuk HP */
-  @media only screen and (max-width: 600px) {
-    .cake {
-      width: 150px;
-    }
-  
-    h1 {
-      font-size: 1.8rem;
-    }
-  
-    p, button {
-      font-size: 1rem;
-    }
-  
-    #secret {
-      font-size: 1rem;
-    }
-  }
-  
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive;
+  background: linear-gradient(to right, #ffd6e0, #fceabb);
+  overflow-x: hidden;
+}
+
+/* WELCOME SCREEN */
+.welcome-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #fff3f3;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+.welcome-screen h1 {
+  font-size: 3rem;
+  color: #ff4081;
+}
+
+.welcome-screen p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* SLIDE UP EFFECT */
+.main-screen {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  transition: top 1s ease-in-out;
+  background: linear-gradient(to right, #ffe6f0, #ffeaa7);
+}
+
+.main-screen.show {
+  top: 0;
+}
+
+.container {
+  padding: 30px;
+  text-align: center;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #ff6f91;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff3d7f;
+}
+
+/* KUE & LILIN */
+.cake-container {
+  position: relative;
+  display: inline-block;
+}
+.cake {
+  width: 200px;
+  margin: 10px;
+}
+.candle-flame {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 20px;
+  background: orange;
+  border-radius: 50%;
+  animation: flicker 0.2s infinite alternate;
+}
+@keyframes flicker {
+  from { opacity: 1; transform: scaleY(1); }
+  to { opacity: 0.6; transform: scaleY(0.8); }
+}
+
+#secret {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  color: #c2185b;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* KEMBANG API */
+#fireworks {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background: transparent;
+  animation: fireworks 2s ease-in-out forwards;
+  background-image: url('https://i.ibb.co/d2gR2kZ/fireworks.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0;
+}
+
+#fireworks.show {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .cake { width: 150px; }
+  h1 { font-size: 1.8rem; }
+  p, button { font-size: 1rem; }
+  #secret { font-size: 1rem; }
+}
