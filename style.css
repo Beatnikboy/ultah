@@ -106,7 +106,7 @@ button:hover {
   pointer-events: none;
   background: transparent;
   animation: fireworks 2s ease-in-out forwards;
-  background-image: url('https://i.ibb.co/d2gR2kZ/fireworks.gif');
+  background-image: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3R0M2ExOGs1MmVzM2FvZWUzM2IyZjY3dzVha3I0YndkZDl0cGdvZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MViYNpI0wx69zX7j7w/giphy.gif');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
